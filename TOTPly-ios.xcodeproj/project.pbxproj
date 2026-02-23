@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34F324062F4C771B00B14F9F /* TOTPly-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOTPly-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34F3241C2F4C771E00B14F9F /* TOTPly-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTPly-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34F324262F4C771E00B14F9F /* TOTPly-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTPly-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F324062F4C771B00B14F9F /* TOTPly-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "TOTPly-ios.app"; path = "/Users/matthew/itmo/26-spring/TOTPly/TOTPly-ios/build/Debug-iphoneos/TOTPly-ios.app"; sourceTree = "<absolute>"; };
+		34F3241C2F4C771E00B14F9F /* TOTPly-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TOTPly-iosTests.xctest"; path = "/Users/matthew/itmo/26-spring/TOTPly/TOTPly-ios/build/Debug-iphoneos/TOTPly-ios.app/PlugIns/TOTPly-iosTests.xctest"; sourceTree = "<absolute>"; };
+		34F324262F4C771E00B14F9F /* TOTPly-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TOTPly-iosUITests.xctest"; path = "/Users/matthew/itmo/26-spring/TOTPly/TOTPly-ios/build/Debug-iphoneos/TOTPly-iosUITests-Runner.app/PlugIns/TOTPly-iosUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,21 +88,146 @@
 		34F323FD2F4C771B00B14F9F = {
 			isa = PBXGroup;
 			children = (
-				34F324082F4C771B00B14F9F /* TOTPly-ios */,
+				34F3244B2F4CAC9F00B14F9F /* Sources */,
 				34F3241F2F4C771E00B14F9F /* TOTPly-iosTests */,
 				34F324292F4C771E00B14F9F /* TOTPly-iosUITests */,
-				34F324072F4C771B00B14F9F /* Products */,
+				34F324082F4C771B00B14F9F /* TOTPly-ios */,
 			);
 			sourceTree = "<group>";
 		};
-		34F324072F4C771B00B14F9F /* Products */ = {
+		34F3244B2F4CAC9F00B14F9F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				34F324062F4C771B00B14F9F /* TOTPly-ios.app */,
-				34F3241C2F4C771E00B14F9F /* TOTPly-iosTests.xctest */,
-				34F324262F4C771E00B14F9F /* TOTPly-iosUITests.xctest */,
+				34F3244C2F4CACE100B14F9F /* Modules */,
 			);
-			name = Products;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		34F3244C2F4CACE100B14F9F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				34F3244F2F4CAD0400B14F9F /* FeaturesList */,
+				34F3244D2F4CACEC00B14F9F /* Auth */,
+				34F324502F4CAD0F00B14F9F /* FeatureDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		34F3244D2F4CACEC00B14F9F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				34F3246E2F4CEC1700B14F9F /* Model */,
+				34F3246B2F4CEBF800B14F9F /* ViewModel */,
+				34F3246A2F4CEBEB00B14F9F /* Service */,
+				34F3245B2F4CB85000B14F9F /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		34F3244F2F4CAD0400B14F9F /* FeaturesList */ = {
+			isa = PBXGroup;
+			children = (
+				34F324692F4CEBDD00B14F9F /* Service */,
+				34F324682F4CEB8D00B14F9F /* ViewModel */,
+				34F324672F4CEB8100B14F9F /* Model */,
+				34F324632F4CB8D800B14F9F /* View */,
+			);
+			path = FeaturesList;
+			sourceTree = "<group>";
+		};
+		34F324502F4CAD0F00B14F9F /* FeatureDetails */ = {
+			isa = PBXGroup;
+			children = (
+				34F3246F2F4CEC1C00B14F9F /* Model */,
+				34F3246D2F4CEC0600B14F9F /* Service */,
+				34F3246C2F4CEC0200B14F9F /* ViewModel */,
+				34F324552F4CB7D000B14F9F /* View */,
+			);
+			path = FeatureDetails;
+			sourceTree = "<group>";
+		};
+		34F324552F4CB7D000B14F9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34F3245B2F4CB85000B14F9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34F324632F4CB8D800B14F9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34F324672F4CEB8100B14F9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34F324682F4CEB8D00B14F9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34F324692F4CEBDD00B14F9F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		34F3246A2F4CEBEB00B14F9F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		34F3246B2F4CEBF800B14F9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34F3246C2F4CEC0200B14F9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34F3246D2F4CEC0600B14F9F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		34F3246E2F4CEC1700B14F9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34F3246F2F4CEC1C00B14F9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +334,7 @@
 			mainGroup = 34F323FD2F4C771B00B14F9F;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 34F324072F4C771B00B14F9F /* Products */;
+			productRefGroup = 34F323FD2F4C771B00B14F9F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
