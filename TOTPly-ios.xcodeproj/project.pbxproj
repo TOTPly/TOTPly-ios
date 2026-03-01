@@ -81,6 +81,9 @@
 		34B7464C2F54A49C009F9B4D /* CodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailView.swift; sourceTree = "<group>"; };
 		34B7464D2F54A541009F9B4D /* CodeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailPresenter.swift; sourceTree = "<group>"; };
 		34B7464E2F54A5AA009F9B4D /* CodeDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailRouter.swift; sourceTree = "<group>"; };
+		34B7464F2F54A97A009F9B4D /* AddTOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTOTPView.swift; sourceTree = "<group>"; };
+		34B746502F54AB79009F9B4D /* AddTOTPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTOTPPresenter.swift; sourceTree = "<group>"; };
+		34B746512F54ABDE009F9B4D /* AddTOTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTOTPRouter.swift; sourceTree = "<group>"; };
 		34F3247B2F4E18B000B14F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		34F3247C2F4E191D00B14F9F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		34F3247D2F4E19CA00B14F9F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -358,6 +361,7 @@
 		34B746422F549CF0009F9B4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				34B7464F2F54A97A009F9B4D /* AddTOTPView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +369,7 @@
 		34B746432F549CF5009F9B4D /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				34B746512F54ABDE009F9B4D /* AddTOTPRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 		34B746442F549D01009F9B4D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				34B746502F54AB79009F9B4D /* AddTOTPPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
