@@ -31,7 +31,7 @@ struct TOTPItemDTO: Codable, Equatable {
         return TOTPItem(
             id: id,
             name: name,
-            issuer: issuer,
+            issuer: issuer ?? "",
             secret: secret,
             algorithm: algorithm,
             digits: digits,

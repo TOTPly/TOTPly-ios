@@ -12,7 +12,7 @@ import Foundation
 struct TOTPItem: Equatable, Codable, Identifiable {
     let id: String
     let name: String
-    let issuer: String?
+    let issuer: String
     let secret: String
     let algorithm: TOTPAlgorithm
     let digits: Int
@@ -26,7 +26,7 @@ struct TOTPItem: Equatable, Codable, Identifiable {
         TOTPItem(
             id: UUID().uuidString,
             name: "",
-            issuer: nil,
+            issuer: "",
             secret: "",
             algorithm: .sha1,
             digits: 6,
@@ -35,6 +35,22 @@ struct TOTPItem: Equatable, Codable, Identifiable {
             updatedAt: Date(),
             isDeleted: false,
             syncedAt: nil
+        )
+    }
+    
+    func withUpdated(name: String, issuer: String) -> TOTPItem {
+        TOTPItem(
+            id: id,
+            name: name,
+            issuer: issuer,
+            secret: secret,
+            algorithm: algorithm,
+            digits: digits,
+            period: period,
+            createdAt: createdAt,
+            updatedAt: Date(),
+            isDeleted: isDeleted,
+            syncedAt: syncedAt
         )
     }
 }

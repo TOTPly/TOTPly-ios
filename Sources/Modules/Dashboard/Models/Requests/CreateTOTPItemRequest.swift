@@ -9,7 +9,7 @@ import Foundation
 
 struct CreateTOTPItemRequest: Codable, Equatable {
     let name: String
-    let issuer: String?
+    let issuer: String
     let secret: String
     let algorithm: String
     let digits: Int

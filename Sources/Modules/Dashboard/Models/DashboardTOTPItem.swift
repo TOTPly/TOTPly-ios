@@ -25,8 +25,12 @@ struct DashboardTOTPItem: Equatable, Identifiable {
         return "\(firstPart) \(secondPart)"
     }
 
-    var displayIssuer: String {
-        issuer ?? "Unknown"
+    var displayName: String {
+        guard let item = item else { return "Unknown" }
+        if !item.issuer.isEmpty {
+            return "\(item.issuer) - \(item.name)"
+        }
+        return item.name
     }
 
     var isExpiringSoon: Bool {
