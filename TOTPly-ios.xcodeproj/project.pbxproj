@@ -73,6 +73,11 @@
 		34B746372F549259009F9B4D /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 		34B746392F549B40009F9B4D /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		34B7463A2F549B53009F9B4D /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		34B746452F549D63009F9B4D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		34B746462F549FF6009F9B4D /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		34B746472F54A0A3009F9B4D /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		34B746482F54A190009F9B4D /* TOTPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPRepository.swift; sourceTree = "<group>"; };
+		34B746492F54A26B009F9B4D /* TOTPGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPGenerator.swift; sourceTree = "<group>"; };
 		34F3247B2F4E18B000B14F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		34F3247C2F4E191D00B14F9F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		34F3247D2F4E19CA00B14F9F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -230,6 +235,11 @@
 		34B746212F5488E7009F9B4D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				34B746492F54A26B009F9B4D /* TOTPGenerator.swift */,
+				34B746482F54A190009F9B4D /* TOTPRepository.swift */,
+				34B7463D2F549CBC009F9B4D /* Presenters */,
+				34B7463C2F549CB3009F9B4D /* Routers */,
+				34B7463B2F549CAD009F9B4D /* Views */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -237,6 +247,9 @@
 		34B746232F5488FD009F9B4D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				34B746402F549CD8009F9B4D /* Presenters */,
+				34B7463F2F549CD3009F9B4D /* Routers */,
+				34B7463E2F549CCD009F9B4D /* Views */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -244,6 +257,9 @@
 		34B746242F548903009F9B4D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				34B746442F549D01009F9B4D /* Presenters */,
+				34B746432F549CF5009F9B4D /* Routers */,
+				34B746422F549CF0009F9B4D /* Views */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -286,6 +302,72 @@
 				34B746392F549B40009F9B4D /* StorageService.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		34B7463B2F549CAD009F9B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34B746452F549D63009F9B4D /* DashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34B7463C2F549CB3009F9B4D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				34B746472F54A0A3009F9B4D /* DashboardRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		34B7463D2F549CBC009F9B4D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34B746462F549FF6009F9B4D /* DashboardPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34B7463E2F549CCD009F9B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34B7463F2F549CD3009F9B4D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		34B746402F549CD8009F9B4D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34B746422F549CF0009F9B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34B746432F549CF5009F9B4D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		34B746442F549D01009F9B4D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		34F323FD2F4C771B00B14F9F = {
