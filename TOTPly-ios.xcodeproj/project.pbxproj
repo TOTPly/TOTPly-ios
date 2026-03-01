@@ -186,10 +186,18 @@
 		34B7461C2F5485F0009F9B4D /* AddTOTP */ = {
 			isa = PBXGroup;
 			children = (
+				34B7461F2F548752009F9B4D /* Models */,
+			);
+			path = AddTOTP;
+			sourceTree = "<group>";
+		};
+		34B7461F2F548752009F9B4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				34B7461E2F54865A009F9B4D /* AddTOTPViewState.swift */,
 				34B7461D2F548618009F9B4D /* AddTOTPInput.swift */,
 			);
-			path = AddTOTP;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		34F323FD2F4C771B00B14F9F = {
