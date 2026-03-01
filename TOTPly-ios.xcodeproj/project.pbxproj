@@ -71,6 +71,8 @@
 		34B746352F548E80009F9B4D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		34B746362F548F72009F9B4D /* VerificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationType.swift; sourceTree = "<group>"; };
 		34B746372F549259009F9B4D /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
+		34B746392F549B40009F9B4D /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		34B7463A2F549B53009F9B4D /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
 		34F3247B2F4E18B000B14F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		34F3247C2F4E191D00B14F9F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		34F3247D2F4E19CA00B14F9F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -277,6 +279,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		34B746382F5499B6009F9B4D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				34B7463A2F549B53009F9B4D /* StorageKey.swift */,
+				34B746392F549B40009F9B4D /* StorageService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		34F323FD2F4C771B00B14F9F = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +314,7 @@
 		34F324712F4E13BD00B14F9F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				34B746382F5499B6009F9B4D /* Storage */,
 				34F324812F4E1DDB00B14F9F /* Common */,
 			);
 			path = Core;
