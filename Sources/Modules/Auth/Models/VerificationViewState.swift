@@ -18,12 +18,6 @@ struct VerificationViewState: Equatable {
     var verificationType: VerificationType
     var validationError: String?
     
-    enum VerificationType: Equatable {
-        case registration
-        case login
-        case passwordReset
-    }
-    
     static func initial(email: String, type: VerificationType) -> VerificationViewState {
         VerificationViewState(
             loadingState: .initial,

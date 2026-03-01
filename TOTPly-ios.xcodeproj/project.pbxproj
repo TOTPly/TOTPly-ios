@@ -58,6 +58,19 @@
 		34B7461B2F54808B009F9B4D /* CodeDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDetailViewState.swift; sourceTree = "<group>"; };
 		34B7461D2F548618009F9B4D /* AddTOTPInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTOTPInput.swift; sourceTree = "<group>"; };
 		34B7461E2F54865A009F9B4D /* AddTOTPViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTOTPViewState.swift; sourceTree = "<group>"; };
+		34B746252F548A93009F9B4D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		34B746262F548AAC009F9B4D /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		34B746272F548B92009F9B4D /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		34B7462A2F548C0A009F9B4D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		34B7462B2F548C55009F9B4D /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		34B7462C2F548C6F009F9B4D /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		34B7462D2F548CA8009F9B4D /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		34B7462E2F548CD6009F9B4D /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		34B7462F2F548CEA009F9B4D /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
+		34B746342F548E5F009F9B4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		34B746352F548E80009F9B4D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		34B746362F548F72009F9B4D /* VerificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationType.swift; sourceTree = "<group>"; };
+		34B746372F549259009F9B4D /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 		34F3247B2F4E18B000B14F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		34F3247C2F4E191D00B14F9F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		34F3247D2F4E19CA00B14F9F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -186,6 +199,7 @@
 		34B7461C2F5485F0009F9B4D /* AddTOTP */ = {
 			isa = PBXGroup;
 			children = (
+				34B746242F548903009F9B4D /* Protocols */,
 				34B7461F2F548752009F9B4D /* Models */,
 			);
 			path = AddTOTP;
@@ -198,6 +212,69 @@
 				34B7461D2F548618009F9B4D /* AddTOTPInput.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		34B746202F5488E0009F9B4D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				34B746322F548D2A009F9B4D /* Views */,
+				34B746312F548D21009F9B4D /* Routers */,
+				34B746302F548D18009F9B4D /* Presenters */,
+				34B7462D2F548CA8009F9B4D /* AuthRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		34B746212F5488E7009F9B4D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		34B746232F5488FD009F9B4D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		34B746242F548903009F9B4D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		34B746302F548D18009F9B4D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34B746352F548E80009F9B4D /* LoginPresenter.swift */,
+				34B7462F2F548CEA009F9B4D /* VerificationPresenter.swift */,
+				34B7462B2F548C55009F9B4D /* RegistrationPresenter.swift */,
+				34B746262F548AAC009F9B4D /* WelcomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34B746312F548D21009F9B4D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				34B7462C2F548C6F009F9B4D /* AuthRouter.swift */,
+				34B746272F548B92009F9B4D /* WelcomeRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		34B746322F548D2A009F9B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34B746342F548E5F009F9B4D /* LoginView.swift */,
+				34B7462E2F548CD6009F9B4D /* VerificationView.swift */,
+				34B7462A2F548C0A009F9B4D /* RegistrationView.swift */,
+				34B746252F548A93009F9B4D /* WelcomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		34F323FD2F4C771B00B14F9F = {
@@ -252,6 +329,7 @@
 		34F324742F4E149000B14F9F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				34B746202F5488E0009F9B4D /* Protocols */,
 				34F324762F4E15C700B14F9F /* Models */,
 			);
 			path = Auth;
@@ -260,6 +338,7 @@
 		34F324752F4E154C00B14F9F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				34B746212F5488E7009F9B4D /* Protocols */,
 				34F324772F4E15D000B14F9F /* Models */,
 			);
 			path = Dashboard;
@@ -268,6 +347,8 @@
 		34F324762F4E15C700B14F9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				34B746372F549259009F9B4D /* AuthResult.swift */,
+				34B746362F548F72009F9B4D /* VerificationType.swift */,
 				34B746002F535395009F9B4D /* RegistrationViewState.swift */,
 				34B745FF2F53537A009F9B4D /* LoginViewState.swift */,
 				34B745FE2F535335009F9B4D /* WelcomeViewState.swift */,
@@ -296,6 +377,7 @@
 		34F324782F4E15D900B14F9F /* CodeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				34B746232F5488FD009F9B4D /* Protocols */,
 				34F324792F4E15E000B14F9F /* Models */,
 			);
 			path = CodeDetail;
