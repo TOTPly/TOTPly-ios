@@ -10,7 +10,6 @@ import Foundation
 struct RegistrationResponse: Equatable, Codable {
     let userId: String
     let email: String
-    let requiresEmailVerification: Bool
     let message: String?
 }
 
