@@ -13,4 +13,6 @@ protocol LoginPresenter {
     func didTapForgotPassword()
     func didTapResendVerification(email: String)
     func didTapGoToRegister()
+    func didChangeEmail(_ email: String)
+    func didChangePassword(_ password: String)
 }
