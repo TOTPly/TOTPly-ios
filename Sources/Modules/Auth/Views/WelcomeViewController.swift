@@ -25,7 +25,7 @@ final class WelcomeViewController: UIViewController, WelcomeView {
         label.font = .systemFont(ofSize: 28, weight: .bold)
         label.textAlignment = .center
         label.accessibilityIdentifier = "welcome.title"
-        return l
+        return label
     }()
 
     private lazy var signInButton: UIButton = {
