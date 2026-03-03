@@ -86,6 +86,9 @@
 		34B746512F54ABDE009F9B4D /* AddTOTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTOTPRouter.swift; sourceTree = "<group>"; };
 		34B746542F562548009F9B4D /* KeychainStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageService.swift; sourceTree = "<group>"; };
 		34B746552F5628EC009F9B4D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		34B746A22F571FE7009F9B4D /* LocalAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthRepository.swift; sourceTree = "<group>"; };
+		34B746A42F5720DE009F9B4D /* AuthRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouterImpl.swift; sourceTree = "<group>"; };
+		34B746A62F572542009F9B4D /* WelcomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenterImpl.swift; sourceTree = "<group>"; };
 		34F3247B2F4E18B000B14F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		34F3247C2F4E191D00B14F9F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		34F3247D2F4E19CA00B14F9F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -392,6 +395,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		34B746A32F5720B4009F9B4D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				34B746A42F5720DE009F9B4D /* AuthRouterImpl.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		34B746A52F57251D009F9B4D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34B746A62F572542009F9B4D /* WelcomePresenterImpl.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		34F323FD2F4C771B00B14F9F = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +457,7 @@
 		34F324732F4E13D800B14F9F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				34B746A22F571FE7009F9B4D /* LocalAuthRepository.swift */,
 				34B746542F562548009F9B4D /* KeychainStorageService.swift */,
 			);
 			path = Services;
@@ -446,6 +466,8 @@
 		34F324742F4E149000B14F9F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				34B746A52F57251D009F9B4D /* Presenters */,
+				34B746A32F5720B4009F9B4D /* Routers */,
 				34B746522F55F789009F9B4D /* Views */,
 				34B746202F5488E0009F9B4D /* Protocols */,
 				34F324762F4E15C700B14F9F /* Models */,
