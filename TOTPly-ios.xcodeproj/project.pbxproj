@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B02F6044F0005D5F98 /* NetworkClient.swift */; };
+		34AC02B32F604EE1005D5F98 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */; };
 		34B746AF2F573834009F9B4D /* LocalAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B746A22F571FE7009F9B4D /* LocalAuthRepository.swift */; };
 		34B746B02F573834009F9B4D /* KeychainStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B746542F562548009F9B4D /* KeychainStorageService.swift */; };
 		34B746B12F573834009F9B4D /* AddTOTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B746502F54AB79009F9B4D /* AddTOTPPresenter.swift */; };
@@ -103,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34AC02B02F6044F0005D5F98 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClient.swift; sourceTree = "<group>"; };
 		34B745DF2F534B47009F9B4D /* TOTPly-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOTPly-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B745E02F534B47009F9B4D /* TOTPly-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTPly-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B745E12F534B47009F9B4D /* TOTPly-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTPly-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +260,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34AC02AF2F6044A7005D5F98 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34AC02B02F6044F0005D5F98 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		34B745FC2F53500C009F9B4D /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +561,7 @@
 		34F324712F4E13BD00B14F9F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				34AC02AF2F6044A7005D5F98 /* Network */,
 				34B746382F5499B6009F9B4D /* Storage */,
 				34F324812F4E1DDB00B14F9F /* Common */,
 			);
@@ -571,6 +584,7 @@
 			children = (
 				34B746A22F571FE7009F9B4D /* LocalAuthRepository.swift */,
 				34B746542F562548009F9B4D /* KeychainStorageService.swift */,
+				34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -822,6 +836,7 @@
 				34B746BA2F573834009F9B4D /* CodeDetailInput.swift in Sources */,
 				34B746BB2F573834009F9B4D /* TOTPGenerator.swift in Sources */,
 				34B746BC2F573834009F9B4D /* TOTPRepository.swift in Sources */,
+				34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */,
 				34B746BD2F573834009F9B4D /* DashboardPresenter.swift in Sources */,
 				34B746BE2F573834009F9B4D /* DashboardRouter.swift in Sources */,
 				34B746BF2F573834009F9B4D /* DashboardView.swift in Sources */,
@@ -867,6 +882,7 @@
 				34B746E22F573834009F9B4D /* PasswordResetVerifyResponse.swift in Sources */,
 				34B746E32F573834009F9B4D /* ResendVerificationResponse.swift in Sources */,
 				34B746E42F573834009F9B4D /* LoginResponse.swift in Sources */,
+				34AC02B32F604EE1005D5F98 /* URLSessionNetworkClient.swift in Sources */,
 				34B746E52F573834009F9B4D /* RegistrationResponse.swift in Sources */,
 				34B746E62F573834009F9B4D /* ResendVerificationRequest.swift in Sources */,
 				34B746E72F573834009F9B4D /* PasswordResetVerifyRequest.swift in Sources */,
