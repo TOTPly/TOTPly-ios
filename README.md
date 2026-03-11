@@ -105,3 +105,58 @@ Presenter обновляет View через протокол `render(state)` и
 ## Диаграмма
 
 ![Architecture Diagram](./diagram.drawio.svg)
+
+
+---
+
+## Сеть
+
+### API и Endpoint
+
+**Используемое API:** Alfa ITMO Echo API
+
+**Endpoint:** `GET /server/echo/471057/totply-ios/items`
+
+**Базовый URL:** `https://alfaitmo.ru`
+
+**Полный URL:** `https://alfaitmo.ru/server/echo/471057/totply-ios/items`
+
+### Пример ответа API
+
+```json
+{
+  "items": [
+    {
+      "id": "5",
+      "name": "Dropbox",
+      "issuer": "Dropbox",
+      "secret": "NBSWY3DP",
+      "algorithm": "SHA1",
+      "digits": 6,
+      "period": 30,
+      "createdAt": "2026-03-01T11:00:00Z",
+      "updatedAt": "2026-03-05T13:30:00Z",
+      "isDeleted": false
+    }
+  ]
+}
+```
+
+### Какие поля попадают в слой view
+
+В view слой передаётся модель `DashboardTOTPItem` со следующими полями:
+
+- `id: String` — уникальный идентификатор
+- `displayName: String` — имя для отображения
+- `issuer: String?` — эмитент (компания/сервис)
+- `currentCode: String` — текущий TOTP код
+- `formattedCode: String` — код с форматированием (разделён пробелом: "123 456")
+- `timeRemaining: Int` — секунды до обновления кода
+- `period: Int` — период генерации (нужно чтобы [TODO] рисовать кольцо-индикатор времени)
+- `progressPercentage: Double` — процент оставшегося времени (нужно чтобы [TODO] рисовать кольцо-индикатор времени)
+- `isExpiringSoon: Bool` — флаг истечения (нужно чтобы [TODO] посвечивать кольцо-индикатор времени красным)
+
+### Как проверить
+
+- Войти с дефолт почтой `user@test.com` и паролем `12345`
+- Увидеть заглушку дэшборда с `DashboardTOTPItem` пока что в виде plain text
