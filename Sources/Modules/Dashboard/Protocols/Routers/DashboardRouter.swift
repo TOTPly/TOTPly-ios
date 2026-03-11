@@ -8,9 +8,8 @@
 import Foundation
 
 protocol DashboardRouter {
-    func openCodeDetail(item: TOTPItem)
+    func openCodeDetail(itemId: String)
     func openAddTOTP()
-    func openEditTOTP(item: TOTPItem)
     func openSettings()
     func openProfile()
 }

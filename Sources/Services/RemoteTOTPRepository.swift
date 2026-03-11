@@ -40,14 +40,14 @@ final class RemoteTOTPRepository: TOTPRepository {
         // Пока что если хотя бы один элемент невалиден то кидаем ошибку
         let items = try response.items.map { try $0.toDomain() }
         
-        try? saveItemsToLocalStorage(items)
+        try saveItemsToLocalStorage(items)
         
         return items
     }
     
     func fetchLocalItems() async throws -> [TOTPItem] {
         // грузим из локального кейчейна
-        guard let items: [TOTPItem] = try? storage.load(key: StorageKey.totpItems.rawValue) else {
+        guard let items: [TOTPItem] = try storage.load(key: StorageKey.totpItems.rawValue) else {
             return []
         }
         return items.filter { !$0.isDeleted }
@@ -61,7 +61,7 @@ final class RemoteTOTPRepository: TOTPRepository {
         } else {
             items.append(item)
         }
-        try? storage.save(items, key: StorageKey.totpItems.rawValue)
+        try storage.save(items, key: StorageKey.totpItems.rawValue)
     }
     
     func deleteItem(id: String) async throws {
@@ -83,6 +83,6 @@ final class RemoteTOTPRepository: TOTPRepository {
                 syncedAt: item.syncedAt
             )
         }
-        try? storage.save(items, key: StorageKey.totpItems.rawValue)
+        try storage.save(items, key: StorageKey.totpItems.rawValue)
     }
 }

@@ -11,7 +11,7 @@ protocol DashboardPresenter {
     func viewDidLoad()
     func viewWillAppear()
     func didPullToRefresh()
-    func didSelectItem(at index: Int)
+    func didTapItem(at index: Int)
     func didTapAddNew()
     func didTapSettings()
     func didTapCopyCode(itemId: String)
