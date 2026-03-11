@@ -16,16 +16,20 @@ final class RemoteTOTPRepository: TOTPRepository {
     private let cacheTTL: TimeInterval = 30 * 60
     private var lastSyncDate: Date?
     
+    private let useMockData: Bool
+    
     init(
         networkClient: NetworkClient,
         storage: StorageService,
         baseURL: String = "https://alfaitmo.ru/server/echo",
-        echoPath: String = "471057/totply-ios/items"
+        echoPath: String = "471057/totply-ios/items",
+        useMockData: Bool = false
     ) {
         self.networkClient = networkClient
         self.storage = storage
         self.baseURL = baseURL
         self.echoPath = echoPath
+        self.useMockData = useMockData
     }
     
     private func saveItemsToLocalStorage(_ items: [TOTPItem]) throws {
@@ -34,6 +38,11 @@ final class RemoteTOTPRepository: TOTPRepository {
     
     
     func fetchRemoteItems() async throws -> [TOTPItem] {
+        if useMockData {
+            print("Using mock data")
+            return createMockItems()
+        }
+        
         if let cachedItems = try? await fetchLocalItems(),
            !cachedItems.isEmpty,
            let lastSync = lastSyncDate,
@@ -121,4 +130,61 @@ final class RemoteTOTPRepository: TOTPRepository {
         
         // можно явно удалить?
     }
+    
+    private func createMockItems() -> [TOTPItem] {
+        if let items = loadMockItemsFromJSON() {
+            print("Loaded \(items.count) mock items from JSON")
+            return items
+        }
+        
+        print("something went wrong")
+        return []
+    }
+    
+    private func loadMockItemsFromJSON() -> [TOTPItem]? {
+        guard let url = Bundle.main.url(forResource: "mock_totp_items", withExtension: "json") else {
+            print("mock_totp_items.json not found in bundle")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let response = try decoder.decode(MockTOTPItemsResponse.self, from: data)
+            
+            let now = Date()
+            return response.items.map { dto in
+                TOTPItem(
+                    id: dto.id,
+                    name: dto.name,
+                    issuer: dto.issuer,
+                    secret: dto.secret,
+                    algorithm: TOTPAlgorithm(rawValue: dto.algorithm) ?? .sha1,
+                    digits: dto.digits,
+                    period: dto.period,
+                    createdAt: now.addingTimeInterval(-86400 * 7),
+                    updatedAt: now.addingTimeInterval(-3600),
+                    isDeleted: false,
+                    syncedAt: now
+                )
+            }
+        } catch {
+            print("Failed to decode mock_totp_items.json: \(error)")
+            return nil
+        }
+    }
+}
+
+private struct MockTOTPItemsResponse: Decodable {
+    let items: [MockTOTPItemDTO]
+}
+
+private struct MockTOTPItemDTO: Decodable {
+    let id: String
+    let name: String
+    let issuer: String
+    let secret: String
+    let algorithm: String
+    let digits: Int
+    let period: Int
 }
