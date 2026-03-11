@@ -23,7 +23,7 @@ enum AppError: Error, Equatable {
         case .validationError(let message):
             return message
         case .storageError(let message):
-            return "Storage error: \(message)"
+            return "Ошибка хранилища: \(message)"
         case .unknown(let message):
             return message
         }

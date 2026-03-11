@@ -9,9 +9,14 @@ import Foundation
 
 protocol RegistrationPresenter {
     func viewDidLoad()
-    func didTapRegister(email: String, password: String, displayName: String?)
+    func didTapRegister(email: String, password: String, confirmPassword: String, displayName: String?)
     func didTapGoToLogin()
     func didChangeEmail(_ email: String)
     func didChangePassword(_ password: String)
+    func didChangeConfirmPassword(_ confirmPassword: String)
     func didChangeDisplayName(_ displayName: String)
+    func didEndEditingEmail()
+    func didEndEditingPassword()
+    func didEndEditingConfirmPassword()
+    func didEndEditingDisplayName()
 }

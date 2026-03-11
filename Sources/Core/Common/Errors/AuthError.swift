@@ -18,21 +18,21 @@ enum AuthError: Error, Equatable {
     var localizedDescription: String {
         switch self {
         case .invalidCredentials:
-            return "Invalid email or password"
+            return "Нверная почта или пароль"
         case .emailNotVerified:
-            return "Please verify your email"
+            return "Почта не подтверждена"
         case .sessionExpired:
-            return "Your session has expired"
+            return "Сессия просрочена"
         case .refreshTokenExpired:
-            return "Please login again"
+            return "Войдите снова"
         case .unauthorized:
-            return "Unauthorized access"
+            return "Не авторизован"
         case .accountLocked:
-            return "Account is locked"
+            return "Аккаунт заморожен"
         case .tooManySessions:
-            return "Too many active sessions"
+            return "Слишком много сессий"
         case .suspiciousActivity:
-            return "Suspicious activity detected"
+            return "Подозрительная активность"
         }
     }
 }

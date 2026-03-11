@@ -15,15 +15,15 @@ enum NetworkError: Error, Equatable {
     var localizedDescription: String {
         switch self {
         case .noConnection:
-            return "No internet connection"
+            return "Нет подключения к интернету"
         case .timeout:
-            return "Request timeout"
+            return "Время на запрос вышло"
         case .serverError(let code):
-            return "Server error: \(code)"
+            return "Ошибка сервера: \(code)"
         case .invalidResponse:
-            return "Invalid server response"
+            return "Неверный ответ сервера"
         case .decodingError:
-            return "Failed to decode response"
+            return "Неверно расшифрован ответ сервера"
         }
     }
 }

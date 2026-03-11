@@ -25,7 +25,7 @@ final class WelcomeViewController: UIViewController, WelcomeView {
         label.font = .systemFont(ofSize: 28, weight: .bold)
         label.textAlignment = .center
         label.accessibilityIdentifier = "welcome.title"
-        return l
+        return label
     }()
 
     private lazy var signInButton: UIButton = {
@@ -65,7 +65,7 @@ final class WelcomeViewController: UIViewController, WelcomeView {
 
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -80),
             stackView.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
             stackView.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
         ])

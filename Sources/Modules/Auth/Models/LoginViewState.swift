@@ -12,6 +12,8 @@ struct LoginViewState: Equatable {
     var email: String
     var password: String
     var validationErrors: ValidationErrors
+    var emailTouched: Bool
+    var passwordTouched: Bool
     var isLoginButtonEnabled: Bool
     var showVerificationPrompt: Bool
 
@@ -26,6 +28,8 @@ struct LoginViewState: Equatable {
             email: "",
             password: "",
             validationErrors: ValidationErrors(),
+            emailTouched: false,
+            passwordTouched: false,
             isLoginButtonEnabled: false,
             showVerificationPrompt: false
         )

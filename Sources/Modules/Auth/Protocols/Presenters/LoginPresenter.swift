@@ -15,4 +15,6 @@ protocol LoginPresenter {
     func didTapGoToRegister()
     func didChangeEmail(_ email: String)
     func didChangePassword(_ password: String)
+    func didEndEditingEmail()
+    func didEndEditingPassword()
 }
