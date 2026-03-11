@@ -40,7 +40,7 @@ final class DashboardPresenterImpl: DashboardPresenter {
         state.isRefreshing = true
         render()
         
-        Task {
+        Task { @MainActor in
             await loadItemsFromRemote()
             state.isRefreshing = false
             render()
