@@ -104,7 +104,7 @@ Presenter обновляет View через протокол `render(state)` и
 
 ## Диаграмма
 
-![Architecture Diagram](./diagram.drawio.svg)
+![Architecture Diagram](./diagram.svg)
 
 
 ---
