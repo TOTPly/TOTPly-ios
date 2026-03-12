@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B02F6044F0005D5F98 /* NetworkClient.swift */; };
+		34AC02B32F604EE1005D5F98 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */; };
+		34AC02B62F608076005D5F98 /* RemoteTOTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */; };
+		34AC02B82F60B3F9005D5F98 /* TOTPGeneratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B72F60B3F7005D5F98 /* TOTPGeneratorImpl.swift */; };
+		34AC02C02F6166EC005D5F98 /* DashboardRouterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02BF2F6166EB005D5F98 /* DashboardRouterStub.swift */; };
+		34AC02C32F616BE4005D5F98 /* DashboardPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02C22F616BE4005D5F98 /* DashboardPresenterImpl.swift */; };
+		34AC02C52F616BF8005D5F98 /* DashboardPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02C42F616BF8005D5F98 /* DashboardPresenterImpl.swift */; };
+		34AC02C62F616C2D005D5F98 /* DashboardRouterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02BF2F6166EB005D5F98 /* DashboardRouterStub.swift */; };
+		34AC02C72F616C2D005D5F98 /* DashboardRouterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02BF2F6166EB005D5F98 /* DashboardRouterStub.swift */; };
+		34AC02C82F616C32005D5F98 /* DashboardPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02C22F616BE4005D5F98 /* DashboardPresenterImpl.swift */; };
+		34AC02C92F616C32005D5F98 /* DashboardPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02C22F616BE4005D5F98 /* DashboardPresenterImpl.swift */; };
+		34AC02CA2F616C3B005D5F98 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */; };
+		34AC02CB2F616C3B005D5F98 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */; };
+		34AC02CC2F616C42005D5F98 /* RemoteTOTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */; };
+		34AC02CD2F616C42005D5F98 /* RemoteTOTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */; };
+		34AC02CE2F616C4D005D5F98 /* TOTPGeneratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B72F60B3F7005D5F98 /* TOTPGeneratorImpl.swift */; };
+		34AC02CF2F616C4D005D5F98 /* TOTPGeneratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B72F60B3F7005D5F98 /* TOTPGeneratorImpl.swift */; };
 		34B746AF2F573834009F9B4D /* LocalAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B746A22F571FE7009F9B4D /* LocalAuthRepository.swift */; };
 		34B746B02F573834009F9B4D /* KeychainStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B746542F562548009F9B4D /* KeychainStorageService.swift */; };
 		34B746B12F573834009F9B4D /* AddTOTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B746502F54AB79009F9B4D /* AddTOTPPresenter.swift */; };
@@ -103,6 +120,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34AC02B02F6044F0005D5F98 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClient.swift; sourceTree = "<group>"; };
+		34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTOTPRepository.swift; sourceTree = "<group>"; };
+		34AC02B72F60B3F7005D5F98 /* TOTPGeneratorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPGeneratorImpl.swift; sourceTree = "<group>"; };
+		34AC02BF2F6166EB005D5F98 /* DashboardRouterStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouterStub.swift; sourceTree = "<group>"; };
+		34AC02C22F616BE4005D5F98 /* DashboardPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterImpl.swift; sourceTree = "<group>"; };
+		34AC02C42F616BF8005D5F98 /* DashboardPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterImpl.swift; sourceTree = "<group>"; };
 		34B745DF2F534B47009F9B4D /* TOTPly-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOTPly-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B745E02F534B47009F9B4D /* TOTPly-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTPly-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B745E12F534B47009F9B4D /* TOTPly-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTPly-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +280,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34AC02AF2F6044A7005D5F98 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34AC02B02F6044F0005D5F98 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		34AC02BB2F615C07005D5F98 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34AC02C22F616BE4005D5F98 /* DashboardPresenterImpl.swift */,
+				34AC02C42F616BF8005D5F98 /* DashboardPresenterImpl.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34AC02BE2F6166E2005D5F98 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				34AC02BF2F6166EB005D5F98 /* DashboardRouterStub.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 		34B745FC2F53500C009F9B4D /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +598,7 @@
 		34F324712F4E13BD00B14F9F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				34AC02AF2F6044A7005D5F98 /* Network */,
 				34B746382F5499B6009F9B4D /* Storage */,
 				34F324812F4E1DDB00B14F9F /* Common */,
 			);
@@ -569,8 +619,11 @@
 		34F324732F4E13D800B14F9F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				34AC02B72F60B3F7005D5F98 /* TOTPGeneratorImpl.swift */,
+				34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */,
 				34B746A22F571FE7009F9B4D /* LocalAuthRepository.swift */,
 				34B746542F562548009F9B4D /* KeychainStorageService.swift */,
+				34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -590,6 +643,8 @@
 		34F324752F4E154C00B14F9F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				34AC02BE2F6166E2005D5F98 /* Routers */,
+				34AC02BB2F615C07005D5F98 /* Presenters */,
 				34B747242F574275009F9B4D /* Views */,
 				34B746212F5488E7009F9B4D /* Protocols */,
 				34F324772F4E15D000B14F9F /* Models */,
@@ -819,9 +874,11 @@
 				34B746B72F573834009F9B4D /* CodeDetailRouter.swift in Sources */,
 				34B746B82F573834009F9B4D /* CodeDetailView.swift in Sources */,
 				34B746B92F573834009F9B4D /* CodeDetailViewState.swift in Sources */,
+				34AC02B62F608076005D5F98 /* RemoteTOTPRepository.swift in Sources */,
 				34B746BA2F573834009F9B4D /* CodeDetailInput.swift in Sources */,
 				34B746BB2F573834009F9B4D /* TOTPGenerator.swift in Sources */,
 				34B746BC2F573834009F9B4D /* TOTPRepository.swift in Sources */,
+				34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */,
 				34B746BD2F573834009F9B4D /* DashboardPresenter.swift in Sources */,
 				34B746BE2F573834009F9B4D /* DashboardRouter.swift in Sources */,
 				34B746BF2F573834009F9B4D /* DashboardView.swift in Sources */,
@@ -851,6 +908,8 @@
 				34B746D32F573834009F9B4D /* WelcomeView.swift in Sources */,
 				34B746D42F573834009F9B4D /* AuthRouter.swift in Sources */,
 				34B7472C2F575A44009F9B4D /* RegistrationViewController.swift in Sources */,
+				34AC02C32F616BE4005D5F98 /* DashboardPresenterImpl.swift in Sources */,
+				34AC02C52F616BF8005D5F98 /* DashboardPresenterImpl.swift in Sources */,
 				34B746D52F573834009F9B4D /* WelcomeRouter.swift in Sources */,
 				34B746D62F573834009F9B4D /* LoginPresenter.swift in Sources */,
 				34B746D72F573834009F9B4D /* VerificationPresenter.swift in Sources */,
@@ -864,9 +923,11 @@
 				34B746DF2F573834009F9B4D /* WelcomeViewState.swift in Sources */,
 				34B746E02F573834009F9B4D /* VerifyEmailResponse.swift in Sources */,
 				34B746E12F573834009F9B4D /* PasswordResetResponse.swift in Sources */,
+				34AC02B82F60B3F9005D5F98 /* TOTPGeneratorImpl.swift in Sources */,
 				34B746E22F573834009F9B4D /* PasswordResetVerifyResponse.swift in Sources */,
 				34B746E32F573834009F9B4D /* ResendVerificationResponse.swift in Sources */,
 				34B746E42F573834009F9B4D /* LoginResponse.swift in Sources */,
+				34AC02B32F604EE1005D5F98 /* URLSessionNetworkClient.swift in Sources */,
 				34B746E52F573834009F9B4D /* RegistrationResponse.swift in Sources */,
 				34B746E62F573834009F9B4D /* ResendVerificationRequest.swift in Sources */,
 				34B746E72F573834009F9B4D /* PasswordResetVerifyRequest.swift in Sources */,
@@ -880,6 +941,7 @@
 				34B746EF2F573834009F9B4D /* StorageService.swift in Sources */,
 				34B746F02F573834009F9B4D /* AuthError.swift in Sources */,
 				34B746F12F573834009F9B4D /* NetworkError.swift in Sources */,
+				34AC02C02F6166EC005D5F98 /* DashboardRouterStub.swift in Sources */,
 				34B746F22F573834009F9B4D /* AppError.swift in Sources */,
 				34B746F32F573834009F9B4D /* Result.swift in Sources */,
 				34B746F42F573834009F9B4D /* UserSession.swift in Sources */,
@@ -891,6 +953,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AC02C62F616C2D005D5F98 /* DashboardRouterStub.swift in Sources */,
+				34AC02C82F616C32005D5F98 /* DashboardPresenterImpl.swift in Sources */,
+				34AC02CE2F616C4D005D5F98 /* TOTPGeneratorImpl.swift in Sources */,
+				34AC02CC2F616C42005D5F98 /* RemoteTOTPRepository.swift in Sources */,
+				34AC02CA2F616C3B005D5F98 /* URLSessionNetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +965,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AC02CD2F616C42005D5F98 /* RemoteTOTPRepository.swift in Sources */,
+				34AC02CF2F616C4D005D5F98 /* TOTPGeneratorImpl.swift in Sources */,
+				34AC02C92F616C32005D5F98 /* DashboardPresenterImpl.swift in Sources */,
+				34AC02CB2F616C3B005D5F98 /* URLSessionNetworkClient.swift in Sources */,
+				34AC02C72F616C2D005D5F98 /* DashboardRouterStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,11 +21,18 @@ struct TOTPItemDTO: Codable, Equatable {
     let updatedAt: String
     let isDeleted: Bool
     
-    func toDomain() -> TOTPItem? {
-        guard let algorithm = TOTPAlgorithm(rawValue: algorithm.uppercased()),
-              let createdDate = ISO8601DateFormatter().date(from: createdAt),
-              let updatedDate = ISO8601DateFormatter().date(from: updatedAt) else {
-            return nil
+    func toDomain() throws -> TOTPItem {
+        guard let algorithm = TOTPAlgorithm(rawValue: algorithm.uppercased()) else {
+            throw NetworkError.decodingError
+        }
+        
+        let formatter = ISO8601DateFormatter()
+        guard let createdDate = formatter.date(from: createdAt) else {
+            throw NetworkError.decodingError
+        }
+        
+        guard let updatedDate = formatter.date(from: updatedAt) else {
+            throw NetworkError.decodingError
         }
         
         return TOTPItem(

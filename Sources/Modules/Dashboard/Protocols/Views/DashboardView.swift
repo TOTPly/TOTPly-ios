@@ -9,4 +9,5 @@ import Foundation
 
 protocol DashboardView: AnyObject {
     func render(_ state: DashboardViewState)
+    func copyCodeToClipboard(_ code: String)
 }

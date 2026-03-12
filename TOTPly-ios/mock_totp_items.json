@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "mock-1",
+      "name": "john.doe@example.com",
+      "issuer": "GitHub",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "algorithm": "sha1",
+      "digits": 6,
+      "period": 30
+    },
+    {
+      "id": "mock-2",
+      "name": "work@company.com",
+      "issuer": "Google",
+      "secret": "HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ",
+      "algorithm": "sha256",
+      "digits": 6,
+      "period": 30
+    },
+    {
+      "id": "mock-3",
+      "name": "crypto_wallet",
+      "issuer": "Coinbase",
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "algorithm": "sha1",
+      "digits": 8,
+      "period": 30
+    },
+    {
+      "id": "mock-4",
+      "name": "admin@company.com",
+      "issuer": "AWS",
+      "secret": "MFRGGZDFMZTWQ2LK",
+      "algorithm": "sha512",
+      "digits": 6,
+      "period": 60
+    }
+  ]
+}

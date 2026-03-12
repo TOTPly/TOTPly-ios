@@ -75,9 +75,31 @@ final class AuthRouterImpl: AuthRouter, WelcomeRouter {
     }
     
     func openDashboard() {
+        let networkClient = URLSessionNetworkClient()
+        let storage = KeychainStorageService()
+        let repository = RemoteTOTPRepository(
+            networkClient: networkClient,
+            storage: storage
+        )
+        let generator = TOTPGeneratorImpl()
+        
         // Заглушка
-        let dashboard = DashboardStubViewController()
-        window?.rootViewController = dashboard
+        let router = DashboardRouterStub()
+        
+        let view = DashboardStubViewController()
+        let presenter = DashboardPresenterImpl(
+            view: view,
+            repository: repository,
+            generator: generator,
+            router: router
+        )
+        view.presenter = presenter
+        
+        // Завернем в navigation controller для будущей навигации
+        let nav = UINavigationController(rootViewController: view)
+        nav.navigationBar.prefersLargeTitles = true
+        
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
     

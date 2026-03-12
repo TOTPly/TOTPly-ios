@@ -28,4 +28,31 @@ struct DashboardTOTPItem: Equatable, Identifiable {
     var isExpiringSoon: Bool {
         timeRemaining <= 5
     }
+    
+    static func from(
+        item: TOTPItem,
+        generator: TOTPGenerator
+    ) -> DashboardTOTPItem? {
+        guard let code = generator.generateCode(
+            secret: item.secret,
+            algorithm: item.algorithm,
+            digits: item.digits,
+            period: item.period
+        ) else {
+            return nil
+        }
+        
+        let timeRemaining = generator.getSecondsRemaining(period: item.period)
+        let progress = Double(timeRemaining) / Double(item.period)
+        
+        return DashboardTOTPItem(
+            id: item.id,
+            displayName: item.name,
+            issuer: item.issuer.isEmpty ? nil : item.issuer,
+            currentCode: code,
+            timeRemaining: timeRemaining,
+            period: item.period,
+            progressPercentage: progress
+        )
+    }
 }

@@ -12,4 +12,5 @@ protocol TOTPRepository {
     func fetchRemoteItems() async throws -> [TOTPItem]
     func saveItem(_ item: TOTPItem) async throws
     func deleteItem(id: String) async throws
+    func invalidateCache()
 }
