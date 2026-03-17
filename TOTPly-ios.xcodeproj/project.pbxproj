@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34998F7D2F6997A500EBF491 /* TOTPCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34998F7C2F6997A400EBF491 /* TOTPCellModel.swift */; };
+		34998F7F2F69AC9E00EBF491 /* TOTPCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34998F7E2F69AC9D00EBF491 /* TOTPCell.swift */; };
 		34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B02F6044F0005D5F98 /* NetworkClient.swift */; };
 		34AC02B32F604EE1005D5F98 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */; };
 		34AC02B62F608076005D5F98 /* RemoteTOTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */; };
@@ -122,6 +123,7 @@
 
 /* Begin PBXFileReference section */
 		34998F7C2F6997A400EBF491 /* TOTPCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCellModel.swift; sourceTree = "<group>"; };
+		34998F7E2F69AC9D00EBF491 /* TOTPCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCell.swift; sourceTree = "<group>"; };
 		34AC02B02F6044F0005D5F98 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClient.swift; sourceTree = "<group>"; };
 		34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTOTPRepository.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 		34B747242F574275009F9B4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				34998F7E2F69AC9D00EBF491 /* TOTPCell.swift */,
 				34B747252F57427D009F9B4D /* DashboardStubViewController.swift */,
 			);
 			path = Views;
@@ -946,6 +949,7 @@
 				34B746F02F573834009F9B4D /* AuthError.swift in Sources */,
 				34B746F12F573834009F9B4D /* NetworkError.swift in Sources */,
 				34AC02C02F6166EC005D5F98 /* DashboardRouterStub.swift in Sources */,
+				34998F7F2F69AC9E00EBF491 /* TOTPCell.swift in Sources */,
 				34B746F22F573834009F9B4D /* AppError.swift in Sources */,
 				34B746F32F573834009F9B4D /* Result.swift in Sources */,
 				34B746F42F573834009F9B4D /* UserSession.swift in Sources */,
