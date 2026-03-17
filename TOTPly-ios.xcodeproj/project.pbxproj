@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34998F7D2F6997A500EBF491 /* TOTPCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34998F7C2F6997A400EBF491 /* TOTPCellModel.swift */; };
 		34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B02F6044F0005D5F98 /* NetworkClient.swift */; };
 		34AC02B32F604EE1005D5F98 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */; };
 		34AC02B62F608076005D5F98 /* RemoteTOTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */; };
@@ -120,6 +121,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34998F7C2F6997A400EBF491 /* TOTPCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCellModel.swift; sourceTree = "<group>"; };
 		34AC02B02F6044F0005D5F98 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		34AC02B22F604EDF005D5F98 /* URLSessionNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClient.swift; sourceTree = "<group>"; };
 		34AC02B52F608075005D5F98 /* RemoteTOTPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTOTPRepository.swift; sourceTree = "<group>"; };
@@ -671,6 +673,7 @@
 		34F324772F4E15D000B14F9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				34998F7C2F6997A400EBF491 /* TOTPCellModel.swift */,
 				34B7460E2F54741C009F9B4D /* TOTPItem.swift */,
 				34B7460B2F547156009F9B4D /* Responses */,
 				34B7460A2F54714C009F9B4D /* Requests */,
@@ -877,6 +880,7 @@
 				34AC02B62F608076005D5F98 /* RemoteTOTPRepository.swift in Sources */,
 				34B746BA2F573834009F9B4D /* CodeDetailInput.swift in Sources */,
 				34B746BB2F573834009F9B4D /* TOTPGenerator.swift in Sources */,
+				34998F7D2F6997A500EBF491 /* TOTPCellModel.swift in Sources */,
 				34B746BC2F573834009F9B4D /* TOTPRepository.swift in Sources */,
 				34AC02B12F6044F1005D5F98 /* NetworkClient.swift in Sources */,
 				34B746BD2F573834009F9B4D /* DashboardPresenter.swift in Sources */,
