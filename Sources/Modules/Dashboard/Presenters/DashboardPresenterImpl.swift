@@ -14,9 +14,12 @@ final class DashboardPresenterImpl: DashboardPresenter {
     private let router: DashboardRouter
     
     private var state: DashboardViewState = .initial
-    
+
     private var loadItemsTask: Task<Void, Never>?
     private var refreshTask: Task<Void, Never>?
+
+    private var rawItems: [TOTPItem] = []
+    private var codeTimer: Timer?
     
     init(
         view: DashboardView,
@@ -33,10 +36,32 @@ final class DashboardPresenterImpl: DashboardPresenter {
     
     func viewDidLoad() {
         loadItems()
+        startTimer()
     }
-    
+
     func viewWillAppear() {
         refreshItems()
+    }
+
+    private func startTimer() {
+        let timer = Timer(timeInterval: 1.0, repeats: true) { [weak self] _ in
+            self?.regenerateCodes()
+        }
+        RunLoop.main.add(timer, forMode: .common)
+        codeTimer = timer
+    }
+
+    private func regenerateCodes() {
+        guard !rawItems.isEmpty else { return }
+
+        let viewModels = rawItems.compactMap { DashboardTOTPItem.from(item: $0, generator: generator) }
+        state.items = viewModels
+
+        if !state.searchQuery.isEmpty {
+            didSearch(query: state.searchQuery)
+        } else {
+            render()
+        }
     }
     
     func didPullToRefresh() {
@@ -146,20 +171,21 @@ final class DashboardPresenterImpl: DashboardPresenter {
             if Task.isCancelled { return }
             
             let totpItems = try await repository.fetchRemoteItems()
-            
+
             if Task.isCancelled { return }
-            
+
             let viewModels = totpItems.compactMap { DashboardTOTPItem.from(item: $0, generator: generator) }
-            
+
             if Task.isCancelled { return }
-            
+
             await MainActor.run {
                 // Обновляем только если данные изменились
                 guard state.items != viewModels else {
                     state.loadingState = .loaded
                     return
                 }
-                
+
+                rawItems = totpItems
                 state.items = viewModels
                 state.loadingState = .loaded
                 
@@ -184,20 +210,21 @@ final class DashboardPresenterImpl: DashboardPresenter {
             if Task.isCancelled { return }
             
             let totpItems = try await repository.fetchLocalItems()
-            
+
             if Task.isCancelled { return }
-            
+
             let viewModels = totpItems.compactMap { DashboardTOTPItem.from(item: $0, generator: generator) }
-            
+
             if Task.isCancelled { return }
-            
+
             await MainActor.run {
                 // Обновляем только если данные изменились
                 guard state.items != viewModels else {
                     state.loadingState = .loaded
                     return
                 }
-                
+
+                rawItems = totpItems
                 state.items = viewModels
                 state.loadingState = .loaded
                 render()
