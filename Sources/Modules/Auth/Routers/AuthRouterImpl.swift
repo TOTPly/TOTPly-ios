@@ -79,7 +79,8 @@ final class AuthRouterImpl: AuthRouter, WelcomeRouter {
         let storage = KeychainStorageService()
         let repository = RemoteTOTPRepository(
             networkClient: networkClient,
-            storage: storage
+            storage: storage,
+            useMockData: true
         )
         let generator = TOTPGeneratorImpl()
         

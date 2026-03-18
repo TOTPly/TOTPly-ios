@@ -106,6 +106,10 @@ final class DashboardViewController: UIViewController {
             action: #selector(didTapToggleMask)
         )
         navigationItem.rightBarButtonItems = [refreshButton, maskButton]
+
+        let profileButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(didTapProfile))
+        let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(didTapSettings))
+        navigationItem.leftBarButtonItems = [profileButton, settingsButton]
     }
 
     private func setupUI() {
@@ -183,6 +187,14 @@ final class DashboardViewController: UIViewController {
     }
 
     private var currentState: DashboardViewState?
+
+    @objc private func didTapProfile() {
+        presenter?.didTapProfile()
+    }
+
+    @objc private func didTapSettings() {
+        presenter?.didTapSettings()
+    }
 
     @objc private func didTapToggleMask() {
         presenter?.didTapToggleCodeMask()
