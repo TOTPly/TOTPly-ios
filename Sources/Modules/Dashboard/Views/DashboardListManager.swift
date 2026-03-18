@@ -26,8 +26,20 @@ final class DashboardListManager: NSObject {
     }
 
     func update(items: [TOTPCellModel]) {
+        let oldIds = self.items.map(\.id)
+        let newIds = items.map(\.id)
         self.items = items
-        tableView.reloadData()
+
+        if oldIds == newIds {
+            for cell in tableView.visibleCells {
+                guard let indexPath = tableView.indexPath(for: cell),
+                      let totpCell = cell as? TOTPCell,
+                      indexPath.row < items.count else { continue }
+                totpCell.configure(with: items[indexPath.row])
+            }
+        } else {
+            tableView.reloadData()
+        }
     }
 }
 
